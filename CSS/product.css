@@ -1,0 +1,377 @@
+/* Modern CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* :root {
+    --primary-color: #0056b3;
+    --secondary-color: #003366;
+    --accent-color: #00a0e9;
+    --gradient-start: #2193b0;
+    --gradient-end: #6dd5ed;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #666;
+} */
+/* Header Styles */
+ /* header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+} */
+
+/* .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+} */ 
+
+/* Hero Section */
+.hero-product{
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+    color: white;
+}
+
+.hero-product h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-product p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Products Section */
+.products {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #3b82f6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.card ul li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.card ul li:before {
+    content: "•";
+    color: #3b82f6;
+    position: absolute;
+    left: 0;
+}
+
+.learn-more {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #2563eb;
+}
+
+/* Footer Styles */
+/* .footer {
+    background: linear-gradient(135deg, var(--secondary-color), #001830);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: var(--light-gray);
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        margin: 1rem;
+    }
+} 
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Digital Marketing Tools Section */
+.digital-marketing {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #f8f9ff, #ffffff);
+}
+
+.digital-marketing h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.digital-marketing h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    border-radius: 2px;
+}
+
+.digital-tools-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+}
+
+.tool-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+}
+
+.tool-card.reverse {
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.tool-card.reverse .tool-image {
+    order: 2;
+}
+
+.tool-card.reverse .tool-content {
+    order: 1;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.tool-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.tool-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover .tool-image img {
+    transform: scale(1.05);
+}
+
+.tool-content {
+    padding: 2rem;
+}
+
+.tool-content h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.tool-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.tool-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.tool-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 0;
+    color: #4a5568;
+}
+
+.tool-features i {
+    color: #3b82f6;
+    font-size: 1.2rem;
+}
+
+.demo-btn {
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.demo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+@media (max-width: 992px) {
+    .tool-card {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-image {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .digital-marketing {
+        padding: 2rem 1rem;
+    }
+
+    .digital-marketing h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tool-card, .tool-card.reverse {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .tool-image {
+        height: auto;
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .tool-image img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .tool-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .tool-card.reverse .tool-image,
+    .tool-card.reverse .tool-content {
+        order: unset;
+    }
+
+    .tool-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tool-features {
+        margin-bottom: 1.5rem;
+    }
+}
